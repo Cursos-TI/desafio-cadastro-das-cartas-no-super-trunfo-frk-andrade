@@ -27,7 +27,7 @@ int main() {
     float pib1, pib2;
     int p_turistico1, p_turistico2;
 
-    //Lógica para obtenção das informações
+    //Lógica para obtenção das informações da carta 1
     printf("Vamos começar com a Carta 1! \n");
     printf("Informe letra do Estado no intervalo de A a H: \n");
     scanf("%s", &letra_estado1);
@@ -52,6 +52,32 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d \n", p_turistico1);
+
+    //Lógica para obtenção das informações da carta 2
+    printf("Agora a Carta 2! \n");
+    printf("Informe letra do Estado no intervalo de A a H: \n");
+    scanf("%s", &letra_estado2);
+    printf("Informe novamente a letra do Estado, seguida do número no intervalo entre 01 a 04: \n");
+    scanf("%s", &cod_carta2);
+    printf("Informe o nome da cidade: \n");
+    scanf("%s", &nome_cidade2);
+    printf("Informe a quantidade de habitantes: \n");
+    scanf("%d", &habitantes2);
+    printf("Informe o tamanho da cidade em km²: \n");
+    scanf("%f", &area2);
+    printf("Informe o PIB: \n");
+    scanf("%f", &pib2);
+    printf("Informe a quantidade de pontos turísticos: \n");
+    scanf("%d", &p_turistico2);
+    //Exibição dos dados armazenados
+    printf("Carta 2:\n");
+    printf("Estado: %c\n", letra_estado2);
+    printf("Código: %s\n", cod_carta2);
+    printf("Nome da Cidade: %s\n", nome_cidade2);
+    printf("População: %d\n", habitantes2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f bilhões de reais\n", pib2);
+    printf("Número de Pontos Turísticos: %d \n", p_turistico2);
 
     return 0;
 }
