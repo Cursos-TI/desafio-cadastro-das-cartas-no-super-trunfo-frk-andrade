@@ -28,7 +28,8 @@ int main() {
     int p_turistico1, p_turistico2;
 
     //Lógica para obtenção das informações da carta 1
-    printf("Vamos começar com a Carta 1! \n");
+    printf("Bem-vindo ao Desafio Super Trunfo - Países!\n");
+    printf("Vamos começar cadastrando a Carta 1! \n");
     printf("Informe letra do Estado no intervalo de A a H: \n");
     scanf("%s", &letra_estado1);
     printf("Informe novamente a letra do Estado, seguida do número no intervalo entre 01 a 04: \n");
