@@ -44,6 +44,7 @@ int main() {
     scanf("%f", &pib1);
     printf("Informe a quantidade de pontos turísticos: \n");
     scanf("%d", &p_turistico1);
+    
     //Exibição dos dados armazenados
     printf("Carta 1:\n");
     printf("Estado: %c\n", letra_estado1);
@@ -70,6 +71,7 @@ int main() {
     scanf("%f", &pib2);
     printf("Informe a quantidade de pontos turísticos: \n");
     scanf("%d", &p_turistico2);
+    
     //Exibição dos dados armazenados
     printf("Carta 2:\n");
     printf("Estado: %c\n", letra_estado2);
