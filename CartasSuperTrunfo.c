@@ -19,7 +19,7 @@ int main() {
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
     //declaração das variáveis
-    char letra_estado1, letra_estado2 = "";
+    char letra_estado1, letra_estado2 ="";
     char cod_carta1[3], cod_carta2[3] = "";
     char nome_cidade1[30], nome_cidade2[30] = "";
     int habitantes1, habitantes2 = "";
@@ -27,5 +27,22 @@ int main() {
     float pib1, pib2;
     int p_turistico1, p_turistico2;
 
+    //Lógica para obtenção das informações
+    printf("Vamos começar com a Carta 1! \n");
+    printf("Informe letra do Estado no intervalo de A a H: \n");
+    scanf("%s", &letra_estado1);
+    printf("Informe novamente a letra do Estado, seguida do número no intervalo entre 01 a 04: \n");
+    scanf("%s", &cod_carta1);
+    printf("Informe o nome da cidade: \n");
+    scanf("%s", &nome_cidade1);
+    printf("Informe a quantidade de habitantes: \n");
+    scanf("%d", &habitantes1);
+    printf("Informe o tamanho da cidade em km²: \n");
+    scanf("%f", &area1);
+    printf("Informe o PIB: \n");
+    scanf("%f", &pib1);
+    printf("Informe a quantidade de pontos turísticos: \n");
+    scanf("%d", &p_turistico1);
+    
     return 0;
 }
