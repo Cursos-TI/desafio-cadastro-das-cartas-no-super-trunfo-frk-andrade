@@ -44,6 +44,12 @@ int main() {
     scanf("%f", &pib1);
     printf("Informe a quantidade de pontos turísticos: \n");
     scanf("%d", &p_turistico1);
+
+    //Nível aventureiro
+    //Calculando a densidade populacional
+    float densidade1 = habitantes1 / area1;
+    //Calculando o PIB per capta
+    float pib_capita1 = (float) pib1 / habitantes1;
     
     //Exibição dos dados armazenados
     printf("Carta 1:\n");
@@ -54,6 +60,10 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d \n", p_turistico1);
+    
+    //Exibição dos resultados de nível aventureiro
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per Capita: %.2f reais\n", pib_capita1);
 
     //Lógica para obtenção das informações da carta 2
     printf("Agora a Carta 2! \n");
@@ -71,6 +81,12 @@ int main() {
     scanf("%f", &pib2);
     printf("Informe a quantidade de pontos turísticos: \n");
     scanf("%d", &p_turistico2);
+
+    //Nível aventureiro
+    //Calculando a densidade populacional
+    float densidade2 = habitantes2 / area2;
+    //Calculando o PIB per capta
+    float pib_capita2 = (float) pib2 / habitantes2;
     
     //Exibição dos dados armazenados
     printf("Carta 2:\n");
@@ -81,6 +97,10 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d \n", p_turistico2);
+
+    //Exibição dos resultados de nível aventureiro
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per Capita: %.2f reais\n", pib_capita2);
 
     return 0;
 }
