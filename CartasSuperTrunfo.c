@@ -22,7 +22,7 @@ int main() {
     char letra_estado1, letra_estado2 ="";
     char cod_carta1[3], cod_carta2[3] = "";
     char nome_cidade1[30], nome_cidade2[30] = "";
-    int habitantes1, habitantes2 = "";
+    unsigned long int populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
     int p_turistico1, p_turistico2;
@@ -36,8 +36,8 @@ int main() {
     scanf("%s", &cod_carta1);
     printf("Informe o nome da cidade: \n");
     scanf("%s", &nome_cidade1);
-    printf("Informe a quantidade de habitantes: \n");
-    scanf("%d", &habitantes1);
+    printf("Informe a população: \n");
+    scanf("%lu", &populacao1);
     printf("Informe o tamanho da cidade em km²: \n");
     scanf("%f", &area1);
     printf("Informe o PIB: \n");
@@ -47,16 +47,20 @@ int main() {
 
     //Nível aventureiro
     //Calculando a densidade populacional
-    float densidade1 = habitantes1 / area1;
+    float densidade1 = populacao1 / area1;
     //Calculando o PIB per capta
-    float pib_capita1 = (float) pib1 / habitantes1;
+    float pib_capita1 = (float) pib1 / populacao1;
+
+    //Nível mestre
+    //Calculando o super poder
+    float superPoder1 = (float) populacao1 + area1 + pib1 + p_turistico1 + pib_capita1 + (densidade1 / 1);
     
     //Exibição dos dados armazenados
     printf("Carta 1:\n");
     printf("Estado: %c\n", letra_estado1);
     printf("Código: %s\n", cod_carta1);
     printf("Nome da Cidade: %s\n", nome_cidade1);
-    printf("População: %d\n", habitantes1);
+    printf("População: %lu\n", populacao1);
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d \n", p_turistico1);
@@ -64,6 +68,7 @@ int main() {
     //Exibição dos resultados de nível aventureiro
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
     printf("PIB per Capita: %.2f reais\n", pib_capita1);
+
 
     //Lógica para obtenção das informações da carta 2
     printf("Agora a Carta 2! \n");
@@ -73,8 +78,8 @@ int main() {
     scanf("%s", &cod_carta2);
     printf("Informe o nome da cidade: \n");
     scanf("%s", &nome_cidade2);
-    printf("Informe a quantidade de habitantes: \n");
-    scanf("%d", &habitantes2);
+    printf("Informe a população: \n");
+    scanf("%lu", &populacao2);
     printf("Informe o tamanho da cidade em km²: \n");
     scanf("%f", &area2);
     printf("Informe o PIB: \n");
@@ -84,16 +89,20 @@ int main() {
 
     //Nível aventureiro
     //Calculando a densidade populacional
-    float densidade2 = habitantes2 / area2;
+    float densidade2 = populacao2 / area2;
     //Calculando o PIB per capta
-    float pib_capita2 = (float) pib2 / habitantes2;
+    float pib_capita2 = (float) pib2 / populacao2;
+
+    //Nível mestre
+    //Calculando o super poder
+    float superPoder2 = (float) populacao2 + area2 + pib2 + p_turistico2 + pib_capita2 + (densidade2 / 1);
     
     //Exibição dos dados armazenados
     printf("Carta 2:\n");
     printf("Estado: %c\n", letra_estado2);
     printf("Código: %s\n", cod_carta2);
     printf("Nome da Cidade: %s\n", nome_cidade2);
-    printf("População: %d\n", habitantes2);
+    printf("População: %lu\n", populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d \n", p_turistico2);
