@@ -113,6 +113,9 @@ int main() {
 
     //Exibição do comparativo das cartas
     //Implementando as estruturas de decisão if e else
+    /*As condições são testadas e caso o resultado seja 1, a primeira saída 
+    aparece para o usuário, caso contrário, a segunda será exibida.*/
+    
     printf("Comparação de Cartas:\n");
 
     if (populacao1 > populacao2) {
