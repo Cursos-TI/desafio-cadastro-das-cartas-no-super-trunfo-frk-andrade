@@ -114,21 +114,32 @@ int main() {
     //Exibição do comparativo das cartas
     //implementando a lógica com switch case
 
-    int atributoEscolhido; //criei uma variável para receber o valor digitado pelo usuário.
+    //criei duas variáveis para receber o valor digitado pelo usuário.
+    int primeiroAtributo;
+    int segundoAtributo;
 
     //Menu de exibição com os dados que serão usados para o comparativo.
-    printf("Escolha qual atributo será usado para comparar as cartas: \n");
+    printf("Escolha dois diferentes atributos que serão usados para comparar as cartas: \n");
     printf("1 - População\n");
     printf("2 - Área\n");
     printf("3 - PIB\n");
     printf("4 - Número de Pontos Turísticos\n");
     printf("5 - Densidade Demográfica \n");
-    printf("Digite o número: ");
-    scanf("%d", &atributoEscolhido);
+    printf("Digite o número do primeiro atributo: \n ");
+    scanf("%d", &primeiroAtributo);
+    printf("Digite o número do segundo atributo: \n ");
+    scanf("%d", &segundoAtributo);
 
-    switch (atributoEscolhido)
+    if ((primeiroAtributo || segundoAtributo) > 5 )
     {
-    case 1:
+        printf("Selecione um número válido! \n");
+    } else if (primeiroAtributo == segundoAtributo)
+    {       
+        printf("Selecione atributos diferentes.\n");
+    } else {
+        switch (primeiroAtributo || segundoAtributo)
+        {
+        case 1:
         printf("Resultado do comparativo de População entre %s e %s \n", nome_cidade1, nome_cidade2);
         printf("A Carta 1 da cidade %s possui %lu habitantes\n", nome_cidade1, populacao1);
         printf("A Carta 2 da cidade %s possui %lu habitantes\n", nome_cidade2, populacao2);
@@ -197,10 +208,9 @@ int main() {
         printf("Carta 2 venceu!\n");
         }
         break;
-    default:
-        printf("Selecione uma opção válida.\n");
-        break;
-        }
-
+    
     return 0;
+    }
+    
+    
 }
