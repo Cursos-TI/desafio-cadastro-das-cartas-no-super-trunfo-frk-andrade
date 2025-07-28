@@ -5,7 +5,6 @@ int main() {
     
     //declaração das variáveis
     char letra_estado1, letra_estado2;
-    char *cod_carta1, *cod_carta2;
     char *nome_cidade1, *nome_cidade2; 
     unsigned long int populacao1, populacao2;
     float area1, area2;
@@ -14,7 +13,6 @@ int main() {
 
     //Dados da Carta 1
     letra_estado1 = 'A';
-    cod_carta1 = 'A01';
     nome_cidade1 = "SaoPaulo";
     populacao1 = 12325000;
     area1 = 1521.11;
@@ -34,12 +32,11 @@ int main() {
 
     //Dados da Carta 2
     letra_estado2 = 'B';
-    cod_carta2 = 'B02';
     nome_cidade2 = "RioDeJaneiro";
     populacao2 = 6748000;
     area2 = 1200.25;
-    pib2 = 300.50;
-    p_turistico2 = 30;
+    pib2 = 699.28;
+    p_turistico2 = 50;
 
     //Nível aventureiro
     //Calculando a densidade populacional
@@ -237,6 +234,72 @@ int main() {
         break;
         }
     }
+
+    //definindo o vencedor da rodada
+    printf("Vammos agora descobrir o vencedor da rodada!\n");
+    printf("Ganha a carta com o maior valor da soma dos atributos\n");
+
+    //criando variáveis
+    int somaCarta1;
+    int somaCarta2;
+    char *resultado;
+
+    if(primeiroAtributo && segundoAtributo > 5){
+        printf("Você selecionou uma opção inválida!\n");
+    } else if(primeiroAtributo && segundoAtributo == 1 || 2){
+        somaCarta1 = (float) populacao1 + area1;
+        somaCarta2 = (float) populacao2 + area2;
+        resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
+        printf("%s\n", resultado);
+    } else if (primeiroAtributo && segundoAtributo == 1 || 3){
+        somaCarta1 = (float) populacao1 + pib1;
+        somaCarta2 = (float) populacao2 + pib2;
+        resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
+        printf("%s\n", resultado);
+    } else if (primeiroAtributo && segundoAtributo == 1 || 4){
+        somaCarta1 = populacao1 + p_turistico1;
+        somaCarta2 = populacao2 + p_turistico2;
+        resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
+        printf("%s\n", resultado);
+    } else if (primeiroAtributo && segundoAtributo == 1 || 5){
+        somaCarta1 = (float) populacao1 + densidade1;
+        somaCarta2 = (float) populacao2 + densidade2;
+        resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
+        printf("%s\n", resultado);
+    } else if (primeiroAtributo && segundoAtributo == 2 || 3){
+        somaCarta1 = area1 + pib1;
+        somaCarta2 = area2 + pib2;
+        resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
+        printf("%s\n", resultado);
+    } else if (primeiroAtributo && segundoAtributo == 2 || 4){
+        somaCarta1 = (float) area1 + p_turistico1;
+        somaCarta2 = (float) area2 + p_turistico2;
+        resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
+        printf("%s\n", resultado);
+    } else if (primeiroAtributo && segundoAtributo == 2 || 5){
+        somaCarta1 = area1 + densidade1;
+        somaCarta2 = area2 + densidade2;
+        resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
+        printf("%s\n", resultado);
+    } else if (primeiroAtributo && segundoAtributo == 3 || 4){
+        somaCarta1 = (float) p_turistico1 + pib1;
+        somaCarta2 = (float) p_turistico2 + pib2;
+        resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
+        printf("%s\n", resultado);
+    } else if (primeiroAtributo && segundoAtributo == 3 || 5){
+        somaCarta1 = densidade1 + pib1;
+        somaCarta2 = densidade2 + pib2;
+        resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
+        printf("%s\n", resultado);
+    } else if (primeiroAtributo && segundoAtributo == 4 || 5){
+        somaCarta1 = (float) p_turistico1 + densidade1;
+        somaCarta2 = (float) p_turistico2 + densidade2;
+        resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
+        printf("%s\n", resultado);
+    } else if (somaCarta1 == somaCarta2) {
+        printf("Empate!\n");
+    };
+    
    
     return 0;  
 }
