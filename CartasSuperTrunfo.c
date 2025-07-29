@@ -5,48 +5,68 @@ int main() {
     
     //declaração das variáveis
     char letra_estado1, letra_estado2;
-    char *nome_cidade1, *nome_cidade2; 
+    char cod_carta1[4], cod_carta2[4];
+    char nome_cidade1[20], nome_cidade2[20];
     unsigned long int populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
     int p_turistico1, p_turistico2;
 
-    //Dados da Carta 1
-    letra_estado1 = 'A';
-    nome_cidade1 = "SaoPaulo";
-    populacao1 = 12325000;
-    area1 = 1521.11;
-    pib1 = 699.28;
-    p_turistico1 = 50;
+    //Lógica para obtenção das informações da carta 1
+    printf("Bem-vindo ao Desafio Super Trunfo - Países!\n");
+    printf("Vamos começar cadastrando a Carta 1! \n");
+    printf("Informe letra do Estado no intervalo de A a H: \n");
+    scanf("%s", &letra_estado1);
+    printf("Informe novamente a letra do Estado, seguida do número no intervalo entre 01 a 04: \n");
+    scanf("%s", &cod_carta1);
+    printf("Informe o nome da cidade: \n");
+    scanf("%s", &nome_cidade1);
+    printf("Informe a população: \n");
+    scanf("%lu", &populacao1);
+    printf("Informe o tamanho da cidade em km²: \n");
+    scanf("%f", &area1);
+    printf("Informe o PIB: \n");
+    scanf("%f", &pib1);
+    printf("Informe a quantidade de pontos turísticos: \n");
+    scanf("%d", &p_turistico1);
 
 
     //Nível aventureiro
     //Calculando a densidade populacional
     float densidade1 = populacao1 / area1;
     //Calculando o PIB per capta
-    float pib_capita1 = (float) pib1 / populacao1;
+    float pib_capita1 = (float) (pib1 * 1000000000.0) / populacao1;
 
     //Nível mestre
     //Calculando o super poder
-    float superPoder1 = (float) populacao1 + area1 + pib1 + p_turistico1 + pib_capita1 + (densidade1 / 1);
+    float superPoder1 = (float) populacao1 + area1 + pib1 + p_turistico1 + pib_capita1 + (1.0 / densidade1);
 
-    //Dados da Carta 2
-    letra_estado2 = 'B';
-    nome_cidade2 = "RioDeJaneiro";
-    populacao2 = 6748000;
-    area2 = 1200.25;
-    pib2 = 699.28;
-    p_turistico2 = 50;
+    //Lógica para obtenção das informações da carta 2
+    printf("Agora a Carta 2! \n");
+    printf("Informe letra do Estado no intervalo de A a H: \n");
+    scanf("%s", &letra_estado2);
+    printf("Informe novamente a letra do Estado, seguida do número no intervalo entre 01 a 04: \n");
+    scanf("%s", &cod_carta2);
+    printf("Informe o nome da cidade: \n");
+    scanf("%s", &nome_cidade2);
+    printf("Informe a população: \n");
+    scanf("%lu", &populacao2);
+    printf("Informe o tamanho da cidade em km²: \n");
+    scanf("%f", &area2);
+    printf("Informe o PIB: \n");
+    scanf("%f", &pib2);
+    printf("Informe a quantidade de pontos turísticos: \n");
+    scanf("%d", &p_turistico2);
 
     //Nível aventureiro
     //Calculando a densidade populacional
     float densidade2 = populacao2 / area2;
     //Calculando o PIB per capta
-    float pib_capita2 = (float) pib2 / populacao2;
+    float pib_capita2 = (float) (pib2 * 1000000000.0) / populacao2;
 
     //Nível mestre
     //Calculando o super poder
-    float superPoder2 = (float) populacao2 + area2 + pib2 + p_turistico2 + pib_capita2 + (densidade2 / 1);
+    float superPoder2 = (float) populacao2 + area2 + pib2 + p_turistico2 + pib_capita2 + (1.0 / densidade2);
 
     //Exibição do comparativo das cartas
     //implementando a lógica com switch case
@@ -56,7 +76,7 @@ int main() {
     int segundoAtributo;
 
     //Menu de exibição com os dados que serão usados para a primeira comparação.
-    printf("Seja Bem-vindo ao Jogo Super Trunfo - Países!");
+    printf("Seja Bem-vindo ao Jogo Super Trunfo - Países!\n");
     printf("Escolha o primeiro atributo para comparar as cartas: \n");
     printf("1 - População\n");
     printf("2 - Área\n");
@@ -244,54 +264,54 @@ int main() {
     int somaCarta2;
     char *resultado;
 
-    if(primeiroAtributo && segundoAtributo > 5){
+    if(primeiroAtributo > 5 && segundoAtributo > 5){
         printf("Você selecionou uma opção inválida!\n");
-    } else if(primeiroAtributo && segundoAtributo == 1 || 2){
+    } else if(primeiroAtributo == 1 || 2 && segundoAtributo == 1 || 2){
         somaCarta1 = (float) populacao1 + area1;
         somaCarta2 = (float) populacao2 + area2;
         resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
         printf("%s\n", resultado);
-    } else if (primeiroAtributo && segundoAtributo == 1 || 3){
+    } else if (primeiroAtributo == 1 || 3 && segundoAtributo == 1 || 3){
         somaCarta1 = (float) populacao1 + pib1;
         somaCarta2 = (float) populacao2 + pib2;
         resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
         printf("%s\n", resultado);
-    } else if (primeiroAtributo && segundoAtributo == 1 || 4){
+    } else if (primeiroAtributo == 1 || 4 && segundoAtributo == 1 || 4){
         somaCarta1 = populacao1 + p_turistico1;
         somaCarta2 = populacao2 + p_turistico2;
         resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
         printf("%s\n", resultado);
-    } else if (primeiroAtributo && segundoAtributo == 1 || 5){
+    } else if (primeiroAtributo == 1 || 5 && segundoAtributo == 1 || 5){
         somaCarta1 = (float) populacao1 + densidade1;
         somaCarta2 = (float) populacao2 + densidade2;
         resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
         printf("%s\n", resultado);
-    } else if (primeiroAtributo && segundoAtributo == 2 || 3){
+    } else if (primeiroAtributo == 2 || 3 && segundoAtributo == 2 || 3){
         somaCarta1 = area1 + pib1;
         somaCarta2 = area2 + pib2;
         resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
         printf("%s\n", resultado);
-    } else if (primeiroAtributo && segundoAtributo == 2 || 4){
+    } else if (primeiroAtributo == 2 || 4 && segundoAtributo == 2 || 4){
         somaCarta1 = (float) area1 + p_turistico1;
         somaCarta2 = (float) area2 + p_turistico2;
         resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
         printf("%s\n", resultado);
-    } else if (primeiroAtributo && segundoAtributo == 2 || 5){
+    } else if (primeiroAtributo == 2 || 5 && segundoAtributo == 2 || 5){
         somaCarta1 = area1 + densidade1;
         somaCarta2 = area2 + densidade2;
         resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
         printf("%s\n", resultado);
-    } else if (primeiroAtributo && segundoAtributo == 3 || 4){
+    } else if (primeiroAtributo == 3 || 4 && segundoAtributo == 3 || 4){
         somaCarta1 = (float) p_turistico1 + pib1;
         somaCarta2 = (float) p_turistico2 + pib2;
         resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
         printf("%s\n", resultado);
-    } else if (primeiroAtributo && segundoAtributo == 3 || 5){
+    } else if (primeiroAtributo == 3 || 5 && segundoAtributo == 3 || 5){
         somaCarta1 = densidade1 + pib1;
         somaCarta2 = densidade2 + pib2;
         resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
         printf("%s\n", resultado);
-    } else if (primeiroAtributo && segundoAtributo == 4 || 5){
+    } else if (primeiroAtributo == 4 || 5 && segundoAtributo == 4 || 5){
         somaCarta1 = (float) p_turistico1 + densidade1;
         somaCarta2 = (float) p_turistico2 + densidade2;
         resultado = (somaCarta1 > somaCarta2) ? "Carta 1 Ganhou a Rodada!" : "Carta 2 Ganhou a rodada";
