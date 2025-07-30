@@ -1,24 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
     //declaração das variáveis
     char letra_estado1, letra_estado2;
     char cod_carta1[4], cod_carta2[4];
@@ -70,12 +54,13 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d \n", p_turistico1);
-    printf("Super Poder: %.2f \n", superPoder1);
     
     //Exibição dos resultados de nível aventureiro
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
     printf("PIB per Capita: %.2f reais\n", pib_capita1);
 
+    //Exibição do resultado de nível mestre
+    printf("Super Poder: %.2f \n", superPoder1);
 
     //Lógica para obtenção das informações da carta 2
     printf("Agora a Carta 2! \n");
@@ -122,10 +107,13 @@ int main() {
     //Exibição dos resultados de nível aventureiro
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f reais\n", pib_capita2);
+
+    //Exibição do resultado de nível mestre
     printf("Super Poder: %.2f \n", superPoder2);
 
     //Nível mestre
     //Exibição do comparativo das cartas
+    //Apresentação de como o usuário poderá obter as informações do vencedor
     printf("Comparação de Cartas\n");
     printf("Carta 1 vence se o resultado for 1\n");
     printf("Carta 2 vence se o resultado for 0\n");
