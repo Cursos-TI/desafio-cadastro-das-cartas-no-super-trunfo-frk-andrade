@@ -33,18 +33,23 @@ int main() {
     printf("Vamos começar cadastrando a Carta 1! \n");
     printf("Informe letra do Estado no intervalo de A a H: \n");
     scanf("%c", &letra_estado1);
+    while (getchar() != '\\n');
     printf("Informe novamente a letra do Estado, seguida do número no intervalo entre 01 a 04: \n");
-    scanf("%s", &cod_carta1);
+    scanf("%s", cod_carta1);
     printf("Informe o nome da cidade: \n");
-    scanf("%s", &nome_cidade1);
+    scanf("%s", nome_cidade1);
     printf("Informe a população: \n");
     scanf("%lu", &populacao1);
+    while (getchar() != '\\n');
     printf("Informe o tamanho da cidade em km²: \n");
     scanf("%f", &area1);
+    while (getchar() != '\\n');
     printf("Informe o PIB: \n");
     scanf("%f", &pib1);
+    while (getchar() != '\\n');
     printf("Informe a quantidade de pontos turísticos: \n");
     scanf("%d", &p_turistico1);
+    while (getchar() != '\\n');
 
     //Nível aventureiro
     //Calculando a densidade populacional
@@ -65,6 +70,7 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d \n", p_turistico1);
+    printf("Super Poder: %.2f \n", superPoder1);
     
     //Exibição dos resultados de nível aventureiro
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
@@ -75,18 +81,23 @@ int main() {
     printf("Agora a Carta 2! \n");
     printf("Informe letra do Estado no intervalo de A a H: \n");
     scanf("%c", &letra_estado2);
+    while (getchar() != '\\n');
     printf("Informe novamente a letra do Estado, seguida do número no intervalo entre 01 a 04: \n");
-    scanf("%s", &cod_carta2);
+    scanf("%s", cod_carta2);
     printf("Informe o nome da cidade: \n");
-    scanf("%s", &nome_cidade2);
+    scanf("%s", nome_cidade2);
     printf("Informe a população: \n");
     scanf("%lu", &populacao2);
+    while (getchar() != '\\n');
     printf("Informe o tamanho da cidade em km²: \n");
     scanf("%f", &area2);
+    while (getchar() != '\\n');
     printf("Informe o PIB: \n");
     scanf("%f", &pib2);
+    while (getchar() != '\\n');
     printf("Informe a quantidade de pontos turísticos: \n");
     scanf("%d", &p_turistico2);
+    while (getchar() != '\\n');
 
     //Nível aventureiro
     //Calculando a densidade populacional
@@ -111,6 +122,7 @@ int main() {
     //Exibição dos resultados de nível aventureiro
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f reais\n", pib_capita2);
+    printf("Super Poder: %.2f \n", superPoder2);
 
     //Nível mestre
     //Exibição do comparativo das cartas
